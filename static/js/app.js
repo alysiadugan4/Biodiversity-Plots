@@ -80,9 +80,7 @@ function loadCharts(id) {
 
     for (const [key, value] of Object.entries(filteredMetaData[0])) {
       panel.append("h5").text(key + ": " + value)
-
-    // Look up looping through an Object.entries with a forEach [key, value]
-    // panel.append("h5").text(key + ": " + value)
+    }
 
 
 
@@ -102,6 +100,7 @@ d3.json("samples.json").then((data) => {
 
 
 function optionChanged(selectedID){
-  console.log(selectedID)
+
   loadCharts(selectedID)
+
 }
